@@ -6,7 +6,12 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "test:vitest": "vitest run",
+    "test:vitest:watch": "vitest",
+    "test:vitest:headed": "HEADED=true vitest run",
+    "test:vitest:headed:watch": "HEADED=true vitest",
+    "test:vitest:headless": "vitest run"
   },
   "prettier": {
     "printWidth": 100,
@@ -39,9 +44,12 @@
     "@angular/build": "^21.0.1",
     "@angular/cli": "^21.0.1",
     "@angular/compiler-cli": "^21.0.0",
+    "@types/node": "^25.0.1",
+    "@vitest/browser-playwright": "^4.0.15",
     "devextreme-cli": "latest",
     "devextreme-themebuilder": "25.1.6",
     "jsdom": "^27.1.0",
+    "playwright": "^1.57.0",
     "sass-embedded": "1.66.0",
     "typescript": "~5.9.2",
     "vitest": "^4.0.8"
